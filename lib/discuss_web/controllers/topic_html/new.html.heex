@@ -1,0 +1,21 @@
+<section>
+<.header>
+  New Topic
+  <:subtitle>Use this form to manage post records in your database.</:subtitle>
+</.header>
+
+<.simple_form
+  :let={f}
+  for={@changeset}
+  phx-change="validate"
+  action={~p"/topics/new"}>
+
+  <.input field={f[:title]} label="Title" />
+
+  <:actions>
+    <.button>Save</.button>
+  </:actions>
+
+</.simple_form>
+
+</section>

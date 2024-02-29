@@ -1,0 +1,9 @@
+List
+
+<.table id="topics" rows={@topics}>
+  <:col :let={topic} label="name"><%= topic.title %> (<%= topic.id %>)</:col>
+  <:col :let={topic} label="View"><.link href={~p"/topics/#{topic}"} class={[
+                                        "rounded-lg bg-zinc-900 hover:bg-zinc-700 py-2 px-3",
+                                        "text-sm font-semibold leading-6 text-white active:text-white/80"
+                                        ]}>Show Topci</.link></:col>
+</.table>
